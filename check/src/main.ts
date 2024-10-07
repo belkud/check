@@ -42,17 +42,20 @@ showCarInfo(car)
 // димо делать перерыв на 1 час.
 
 
-function score (car:any) {
+function findTime (car:any) {
   //! (что-то не могу понять как составить условие)
   let needTime = car.distance / car.averageSpeed
-    if ((needTime)>4) {
-      return needTime + Math.floor(needTime-1)
+    if (needTime>4) {
+      if (needTime%4) {
+        return needTime + Math.floor(needTime-1)
+      }
+      return needTime + Math.floor(needTime)
     } else {
       return needTime 
     }
   }
 
-console.log(score(car) + ' часов' );
+console.log(findTime(car) + ' часов' );
 
 
 
