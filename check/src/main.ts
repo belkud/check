@@ -30,11 +30,10 @@ const car = {
 console.log(car);
 
 
-function carInfo(car:any) {
-  return car
+function showCarInfo(car:any) {
+  console.log(car)
 }
-
-console.log(carInfo(car))
+showCarInfo(car)
 
 
 // 2. Функция для подсчета необходимого времени для пре-
@@ -42,13 +41,15 @@ console.log(carInfo(car))
 // Учтите, что через каждые 4 часа дороги водителю необхо-
 // димо делать перерыв на 1 час.
 
+let needTime =
 
 function score (car:any) {
   //! (что-то не могу понять как составить условие)
-    if ((car.distance / car.averageSpeed)%4==0) {
-      return car.distance / car.averageSpeed + Math.round((car.distance / car.averageSpeed)/4)
+  let needTime = car.distance / car.averageSpeed
+    if ((needTime)>4) {
+      return needTime + Math.floor(needTime-1)
     } else {
-      return car.distance / car.averageSpeed 
+      return needTime 
     }
   }
 
