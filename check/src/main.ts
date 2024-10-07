@@ -71,11 +71,18 @@ console.log(findTime(car) + ' часов' );
 // 5. Функция сокращения объекта-дроби.
 
 // 1. Функция сложения 2-х объектов-дробей.
-let a = {}
+let a = {
+  numerated: 9,
+  denumerated: 3,
+}
+let b = {
+  numerated: 4,
+  denumerated: 2,
+}
 function summ(a:any, b:any) {
   return a + b
 }
-console.log(summ(6/2, 9/3));
+summ()
 
 
 // 2. Функция вычитания 2-х объектов-дробей.
@@ -128,11 +135,15 @@ console.log(reduce(4/8));
 const time = {}
 
 function showTime(time:any) {
+  
   return time
 }
 console.log(showTime(time))
 
-// let date = new Date(); /* Создаем новый объект Date */
+
+
+
+
 // let hour = date.getHours(); /* Текущий час */
 // let minutes = date.getMinutes(); /* Текущая минута */
 // let seconds = date.getSeconds(); /* Текущая секунда */
