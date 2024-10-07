@@ -53,7 +53,7 @@ function score (car:any) {
     }
   }
 
-console.log(Math.round(score(car)) + ' часов' );
+console.log(score(car) + ' часов' );
 
 
 
