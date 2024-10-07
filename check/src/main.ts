@@ -24,8 +24,8 @@ const car = {
   producer: 'Kia',
   model: 'Rio',
   year:2019,
-  averageSpeed: 30,
-  distance: 200
+  averageSpeed: 10,
+  distance: 80
 }
 console.log(car);
 
@@ -36,17 +36,23 @@ function carInfo(car:any) {
 
 console.log(carInfo(car))
 
+
 // 2. Функция для подсчета необходимого времени для пре-
 // одоления переданного расстояния со средней скоростью.
 // Учтите, что через каждые 4 часа дороги водителю необхо-
 // димо делать перерыв на 1 час.
 
 
-function time (car:any) {
-  return car.distance / car.averageSpeed
-}
+function score (car:any) {
+  //! (что-то не могу понять как составить условие)
+    if ((car.distance / car.averageSpeed)%4==0) {
+      return car.distance / car.averageSpeed + Math.round((car.distance / car.averageSpeed)/4)
+    } else {
+      return car.distance / car.averageSpeed 
+    }
+  }
 
-console.log(Math.round(time(car)) + ' необходимо часов' );
+console.log(Math.round(score(car)) + ' часов' );
 
 
 
@@ -114,4 +120,28 @@ console.log(reduce(4/8));
 // части времени, может измениться и другая. Например: если ко
 // времени «20:30:45» добавить 30 секунд, то должно получиться
 // «20:31:15», а не «20:30:75».
+
+const time = {
+  hours: prompt('введите часы'),
+  // hours: 15,
+  minutes: 57,
+  seconds: 25
+}
+
+function showTime(time:any) {
+  return time
+}
+console.log(showTime(time))
+
+// let date = new Date(); /* Создаем новый объект Date */
+// let hour = date.getHours(); /* Текущий час */
+// let minutes = date.getMinutes(); /* Текущая минута */
+// let seconds = date.getSeconds(); /* Текущая секунда */
+
+// if (seconds > 60) 
+// {
+// minutes = "0" + minutes; 
+// }
+
+
 
