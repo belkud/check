@@ -121,12 +121,7 @@ console.log(reduce(4/8));
 // времени «20:30:45» добавить 30 секунд, то должно получиться
 // «20:31:15», а не «20:30:75».
 
-const time = {
-  hours: prompt('введите часы'),
-  // hours: 15,
-  minutes: 57,
-  seconds: 25
-}
+const time = {}
 
 function showTime(time:any) {
   return time
