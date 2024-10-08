@@ -155,3 +155,63 @@ console.log(showTime(time))
 
 
 
+// 1. Создайте скрипт, который запрашивает ввод двух 
+// чисел (используйте prompt) и после показывает их сумму.
+
+// let num1 = Number(prompt ('первое число'))
+// let num2 = Number(prompt ('второе число'))
+
+// console.log(num1 + num2);
+
+// 2. Методы Math.round и toFixed, согласно документации, округляют до ближайшего целого числа: 0..4 
+// округляется в меньшую сторону, тогда как 5..9 в большую сторону.
+
+console.log(Math.round(1.37));
+console.log(2.35.toFixed(20));
+
+
+
+
+console.log(Number(5.35.toFixed(1)));
+
+
+
+// Создайте функцию readNumber, которая будет запрашивать 
+// ввод числового значения до тех пор, пока посетитель 
+// его не введёт.
+
+// Функция должна возвращать числовое значение.
+
+  let num;
+function readNumber() {
+
+  do {
+    num = prompt("Введите число", 0);
+  } while ( !isFinite(num) );
+
+  if (num === null || num === '') return null;
+
+  return +num;
+}
+
+// alert(`Число: ${readNumber()}`);
+
+console.log(250.0.toString()); // перевод числа в строку
+console.log(String(250)); // перевод числа в строку
+
+//==    нестрогое равенство
+console.log('250'==250);
+//===   строгое равенство
+console.log('250'===250);
+
+
+console.log(250.0.toString(2)); // система
+console.log(250.0.toString(8));// система
+console.log(250.0.toString(10));// система
+console.log(250.0.toString(16));// система
+
+
+console.log(parseInt('5324.88fff'));
+console.log(parseFloat('5.5fff'));
+
+console.log(parseInt('ff', 16));
