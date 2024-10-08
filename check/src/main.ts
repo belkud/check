@@ -1,7 +1,4 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
 
 
 
@@ -208,10 +205,13 @@ console.log('250'===250);
 console.log(250.0.toString(2)); // система
 console.log(250.0.toString(8));// система
 console.log(250.0.toString(10));// система
-console.log(250.0.toString(16));// система
+console.log(250.0.toString(16));//  система
 
 
 console.log(parseInt('5324.88fff'));
 console.log(parseFloat('5.5fff'));
 
-console.log(parseInt('ff', 16));
+
+console.log(5+5);
+
+console.log('afadadf');
