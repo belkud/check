@@ -504,6 +504,10 @@ function testFunc(num){
       let string = `${num}`
       let str = string.split('')[0]
       let str2 = string.split('')[1]
+      // if (+str2==0) {
+        
+      // }
+      // return third[str-2] + ' ' + first[str2-1]
       return third[str-2] + ' ' + first[str2-1]
     } else {
       return `число ${num} больше 100`
