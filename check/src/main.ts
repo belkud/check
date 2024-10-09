@@ -475,3 +475,61 @@ function writeNumber(num) {
 console.log(writeNumber(23));
 console.log(writeNumber(56));
 console.log(writeNumber(89));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function testFunc(num){
+  let first = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
+  let second = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
+  let third = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
+
+  if(num>=0 && num<10){
+      return first[num-1]
+    } else if (num>=10 && num<19){
+      return second[num-10]
+    } else if (num>=20 && num<100) {
+      let string = `${num}`
+      let str = string.split('')[0]
+      let str2 = string.split('')[1]
+      return third[str-2] + ' ' + first[str2-1]
+    } else {
+      return `число ${num} больше 100`
+    }
+
+}
+
+console.log(testFunc(8));
+console.log(testFunc(18));
+
+
+console.log(testFunc(61));
+
+
+
+
+
+
+console.log(testFunc(123));
+
+
+
+
+let nums = '123456789'.split('')
+console.log(nums[8]);
+
+
+
+
