@@ -447,4 +447,31 @@ console.log( str5 );
 // showCarInfo(car)
 
 
+// модуль 2 
 
+// 2 Написать функцию, которая принимает двузначное число
+// и возвращает его в текстовом виде.
+// Например: 35 – тридцать пять, 89 – восемьдесят девять,
+// 12 – двенадцать.
+
+function writeNumber(num) {
+  let first = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
+  let second = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
+  let third = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
+  if (num > 0 && num <= 9) {
+    return first[num - 1];
+  }
+  if (num>= 10 && num <= 20) {
+    return second[num - 10];
+  }
+  if (num > 20 && num <= 99) {
+    let str = `${num}`;
+    str = str.split('');
+    let firstNumber = str[0];
+    let secondNumber = str[1];
+    return `${third[firstNumber - 2]} ${first[secondNumber - 1]}`;
+  }
+}
+console.log(writeNumber(23));
+console.log(writeNumber(56));
+console.log(writeNumber(89));
