@@ -551,14 +551,14 @@ function changeRegisterLetters(str) {
   
   // str = str.toLowerCase()
   for (let i = 0; i < str.length; i++) {  //'i' - это каждый отдельный элемент
+    // console.log(str[i]);
     if(str[i]>=0 && str[i]<=9 ) {
       let str2 = str[i]
       str2 = '_'
-      console.log(str[i]);
       letters.push(str2);
     } else if (str[i] == str[i].toLowerCase()){ // переводим символы с нижним в верхний регистр
       letters.push(str[i].toUpperCase())
-    } else if (str[i] == str[i].toUpperCase()){ // переводим символы с верхним в нижний регистр
+    } else { // переводим символы с верхним в нижний регистр
       letters.push(str[i].toLowerCase())
     }  
       
@@ -574,3 +574,32 @@ console.log(letters.join(''));
 
 
 
+// 4. Написать функцию, которая преобразует названия css-
+// стилей с дефисом в название в СamelСase стиле: font-size
+// в fontSize, background-color в backgroundColor, text-align
+// в textAlign.
+
+ 
+function camelСase(str) 
+{			
+  let newWord = str.split('-'); //['text' 'align']
+  
+  for (let i=0; i<newWord.length; i++) {
+    
+    if ( i == 0 ) continue;
+    let x =  newWord[i].split("") //['t', 'e', 'x', 't'] ['a', 'l', 'i', 'g', 'n']
+    
+    x[0] = newWord[i].charAt(1).toUpperCase()
+    newWord[i] = x.join("") //Text Align
+    console.log(newWord[i]);
+  }
+
+  str = newWord.join("")
+  return str
+}      			
+
+let property1 = 'text-align'; // 'textAlign';
+console.log( camelСase(property1) );
+  
+// let property2 = 'font-size'; // 'fontSize';
+// console.log( camelСase(property2) );
