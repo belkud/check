@@ -473,8 +473,39 @@ function showSymbol(str) {
   return res;
 }
 console.log(showSymbol('привет дорогой друг'));
+// console.log(showSymbol('привет дорогой друг'));
 
  
+//!!!!! второе решение задачи (не совсем верное)
+ // let symbols = {
+//   letter: 0,
+//   number: 0,
+//   symbol: 0,
+// }
+
+// function scoreSymbols(str) {
+//   str = str.toLowerCase() // перевод символов в нижний регистр
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i]>='а' && str[i]<='я'){ // русская раскладка
+//       ++symbols.letter
+//     } else if(str[i]>='a' && str[i]<='z') { //английская раскладка
+//       ++symbols.letter
+//     } else if (str[i]>='0' && str[i]<='9') {
+//       ++symbols.number
+//     } else {
+//         symbols.symbol++
+//       } 
+//     }
+//     return str
+// }
+
+// scoreSymbols('Привет дорогой :%() fdhfghfghдруг45345')
+// scoreSymbols('sfgd896834983')
+
+// console.log(symbols);
+
+
+
 
 
 // 2. Написать функцию, которая принимает двузначное число
@@ -496,10 +527,7 @@ function testFunc(num){
       let string = `${num}`
       let str = string.split('')[0]
       let str2 = string.split('')[1]
-      // if (+str2==0) {
-        
-      // }
-      // return third[str-2] + ' ' + first[str2-1]
+    
       return thirdArray[str-2] + ' ' + firstArray[str2]
     } else {
       return `число ${num} больше 100`
@@ -514,7 +542,34 @@ console.log(testFunc(123));
 
 
 
+// 3. Написать функцию, которая заменяет в полученной строке
+// большие буквы на маленькие, маленькие – на большие, а
+// цифры – на знак нижнего подчеркивания.
+let letters = [] as any
+
+function changeRegisterLetters(str) {
+  
+  // str = str.toLowerCase()
+  for (let i = 0; i < str.length; i++) {  //'i' - это каждый отдельный элемент
+    if(str[i]>=0 && str[i]<=9 ) {
+      let str2 = str[i]
+      str2 = '_'
+      console.log(str[i]);
+      letters.push(str2);
+    } else if (str[i] == str[i].toLowerCase()){ // переводим символы с нижним в верхний регистр
+      letters.push(str[i].toUpperCase())
+    } else if (str[i] == str[i].toUpperCase()){ // переводим символы с верхним в нижний регистр
+      letters.push(str[i].toLowerCase())
+    }  
+      
+    }
+
+    return str
+}
  
+console.log(changeRegisterLetters('ПриВет КоТ357'));
+
+console.log(letters.join(''));
 
 
 
