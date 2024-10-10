@@ -447,59 +447,27 @@ console.log( str5 );
 // showCarInfo(car)
 
 
-// модуль 2 
+// модуль 2  продолжение объектов!!!!!!!!!!!!!!!!!!!!!!!!
 
-// 2 Написать функцию, которая принимает двузначное число
+
+
+
+
+// 2. Написать функцию, которая принимает двузначное число
 // и возвращает его в текстовом виде.
 // Например: 35 – тридцать пять, 89 – восемьдесят девять,
 // 12 – двенадцать.
 
-function writeNumber(num) {
-  let first = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
-  let second = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
-  let third = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
-  if (num > 0 && num <= 9) {
-    return first[num - 1];
-  }
-  if (num>= 10 && num <= 20) {
-    return second[num - 10];
-  }
-  if (num > 20 && num <= 99) {
-    let str = `${num}`;
-    str = str.split('');
-    let firstNumber = str[0];
-    let secondNumber = str[1];
-    return `${third[firstNumber - 2]} ${first[secondNumber - 1]}`;
-  }
-}
-console.log(writeNumber(23));
-console.log(writeNumber(56));
-console.log(writeNumber(89));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function testFunc(num){
-  let first = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
-  let second = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
-  let third = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
+  let firstArray = ['','Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь', 'Восемь', 'Девять'];
+  let secondArray = ['Десять', 'Одинадцать', 'Двенадцать', 'Тринадцать', 'Четырнадцать', 'Пятнадцать', 'Шестнадцать', 'Семьнадцать', 'Восемьнадцать', 'Девяднадцать', 'Двадвать'];
+  let thirdArray = ['Двадцать', 'Тридцать', 'Сорок', 'Пятьдесят', 'Шестьдесят', 'Семьдесят', 'Восемьдесят', 'Девяносто'];
 
   if(num>=0 && num<10){
-      return first[num-1]
+      return firstArray[num]
     } else if (num>=10 && num<19){
-      return second[num-10]
+      return secondArray[num-10]
     } else if (num>=20 && num<100) {
       let string = `${num}`
       let str = string.split('')[0]
@@ -508,32 +476,47 @@ function testFunc(num){
         
       // }
       // return third[str-2] + ' ' + first[str2-1]
-      return third[str-2] + ' ' + first[str2-1]
+      return thirdArray[str-2] + ' ' + firstArray[str2]
     } else {
       return `число ${num} больше 100`
     }
 
 }
 
-console.log(testFunc(8));
+console.log(testFunc(23));
 console.log(testFunc(18));
-
-
-console.log(testFunc(61));
-
-
-
-
-
-
+console.log(testFunc(6));
 console.log(testFunc(123));
 
 
 
+ 
+// 1. Написать функцию, которая принимает строку и выводит
+// статистику о ней: количество букв, количество цифр и
+// количество других знаков.
 
-let nums = '123456789'.split('')
-console.log(nums[8]);
 
+function strStat(str) {
+  str = str.toLowerCase();
+  let res = { letter: 0, number: 0, symbol: 0 };
+  for (let symbol of str) {
+    if (symbol >= 'a' && symbol <= 'z') { //если латиница 
+      ++res.letter;
+    }else if(symbol >= 'а' && symbol <= 'я') {  //если кирилица
+      ++res.letter;
+    } else if (symbol >= '0' && symbol <= '9') {
+      ++res.number;
+    } else {
+      ++res.symbol;
+    }
+  }
+  return res;
+}
+console.log(strStat('привет'));
+
+
+// console.log(showInfo('привет дорогой друг'));
+ 
 
 
 
