@@ -452,6 +452,30 @@ console.log( str5 );
 
 
 
+// 1. Написать функцию, которая принимает строку и выводит
+// статистику о ней: количество букв, количество цифр и
+// количество других знаков.
+
+function showSymbol(str) {
+  str = str.toLowerCase();
+  let res = { letter: 0, number: 0, symbol: 0 };
+  for (let symbol of str) {
+    if (symbol >= 'a' && symbol <= 'z') { //если латиница 
+      ++res.letter;
+    }else if(symbol >= 'а' && symbol <= 'я') {  //если кирилица
+      ++res.letter;
+    } else if (symbol >= '0' && symbol <= '9') {
+      ++res.number;
+    } else {
+      ++res.symbol;
+    }
+  }
+  return res;
+}
+console.log(showSymbol('привет дорогой друг'));
+
+ 
+
 
 // 2. Написать функцию, которая принимает двузначное число
 // и возвращает его в текстовом виде.
@@ -491,32 +515,7 @@ console.log(testFunc(123));
 
 
  
-// 1. Написать функцию, которая принимает строку и выводит
-// статистику о ней: количество букв, количество цифр и
-// количество других знаков.
 
-
-function strStat(str) {
-  str = str.toLowerCase();
-  let res = { letter: 0, number: 0, symbol: 0 };
-  for (let symbol of str) {
-    if (symbol >= 'a' && symbol <= 'z') { //если латиница 
-      ++res.letter;
-    }else if(symbol >= 'а' && symbol <= 'я') {  //если кирилица
-      ++res.letter;
-    } else if (symbol >= '0' && symbol <= '9') {
-      ++res.number;
-    } else {
-      ++res.symbol;
-    }
-  }
-  return res;
-}
-console.log(strStat('привет'));
-
-
-// console.log(showInfo('привет дорогой друг'));
- 
 
 
 
