@@ -459,13 +459,13 @@ console.log( str5 );
 function showSymbol(str) {
   str = str.toLowerCase();
   let res = { letter: 0, number: 0, symbol: 0 };
-  for (let symbol of str) {
-    if (symbol >= 'a' && symbol <= 'z') { //если латиница 
-      ++res.letter;
-    }else if(symbol >= 'а' && symbol <= 'я') {  //если кирилица
-      ++res.letter;
-    } else if (symbol >= '0' && symbol <= '9') {
-      ++res.number;
+  for (let el of str) {
+    if (el >= 'a' && el <= 'z') { //если латиница 
+      res.letter++;
+    }else if(el >= 'а' && el <= 'я') {  //если кирилица
+      res.letter++;
+    } else if (el >= '0' && el <= '9') {
+      res.number++;
     } else {
       ++res.symbol;
     }
@@ -603,3 +603,54 @@ console.log( camelСase(property1) );
   
 // let property2 = 'font-size'; // 'fontSize';
 // console.log( camelСase(property2) );
+ 
+
+ 
+// 7. Вычисляем результат в зависимости от оператора
+
+function calculator(string) {
+
+  const [num1, operator, num2] = string.split(' ');
+
+  const a = Number(num1); // преобразовываем в число
+
+  const b = Number(num2);
+
+
+// Вычисляем результат в зависимости от оператора
+
+  let result;
+
+  switch (operator) {
+
+    case '+':
+      result = a + b;
+      break;
+
+    case '-':
+      result = a - b;
+      break;
+
+    case '*':
+      result = a * b;
+      break;
+
+    case '/':
+      if (b === 0) {
+        throw new Error('Division by zero');
+      }
+
+      result = a / b;
+      break;
+
+    default:
+      throw new Error('Invalid operator');
+  
+  }
+
+  // Возвращаем результат в виде строки
+
+  return String(result);
+
+}
+console.log(calculator(3+3))
