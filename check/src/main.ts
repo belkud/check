@@ -656,16 +656,20 @@ function calculator(string) {
 // console.log(calculator(3+3))
 
 
+
+
+
+
 // 4. Запросить у пользователя год и проверить, високосный он
 // или нет. Високосный год либо кратен 400, либо кратен 4 и
 // при этом не кратен 100.
 
-let age = 1900
+let age = 2024
 
-if (age%400==0) {          
-  console.log(age + ' год високосный') // 400 800 1200 1600 2000   .. кратен 400
-} else  if (age%100==0 ) {
-  console.log(age + ' год НЕ високосный'); // 1900 2000  .. кратен 100
+if (age%400==0) {  // 400 800 1200 1600 2000   .. кратен 400
+  console.log(age + ' год високосный')
+} else  if (age%100==0 ) { // 1900 2000  .. кратен 100
+  console.log(age + ' год НЕ високосный'); 
 } else if (age%4==0) {
   console.log(age + ' год високосный')
 } else {
@@ -687,10 +691,23 @@ switch (USD) {
   default:
     break;
 }
-
-
-
-
-
-
 // интерполяция
+
+
+// 3. Запросить у пользователя трехзначное и число и проверить,
+// есть ли в нем одинаковые цифры.
+
+let checkNumber = '323'
+let newNumber = checkNumber.split('')
+console.log(newNumber);
+
+
+for (let i = 0; i < newNumber.length; i++) {
+ if(newNumber[0]==newNumber[1] || newNumber[1]==newNumber[2] || newNumber[2]==newNumber[0] ){
+      console.log('В числе есть одинаковые цифры')
+    } else {
+      console.log('В числе нет одинаковых цифр')
+ }
+}
+
+
