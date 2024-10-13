@@ -697,16 +697,14 @@ switch (USD) {
 // 3. Запросить у пользователя трехзначное и число и проверить,
 // есть ли в нем одинаковые цифры.
 
-let checkNumber = '323'
-let newNumber = checkNumber.split('')
-console.log(newNumber);
-
+let newNumber = '328' as any
+newNumber.split('')
 
 for (let i = 0; i < newNumber.length; i++) {
- if(newNumber[0]==newNumber[1] || newNumber[1]==newNumber[2] || newNumber[2]==newNumber[0] ){
-      console.log('В числе есть одинаковые цифры')
+   if (newNumber[0]==newNumber[1] || newNumber[1]==newNumber[2] || newNumber[2]==newNumber[0] ) {
+      console.log(`В числе ${newNumber} есть одинаковые цифры`)
     } else {
-      console.log('В числе нет одинаковых цифр')
+      console.log(`В числе ${newNumber} нет одинаковых цифр`)
  }
 }
 
