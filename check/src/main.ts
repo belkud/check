@@ -797,6 +797,18 @@ let multiplicity = 10
 multiplicity%5==0 ? console.log('число кратно 5') : console.log('число не кратно 5')
 
 
+// Запросить 2 числа и найти только наибольший общий
+// делитель.
+let x1 = 20  
+let x2 = 10 
+let dividers = []  
 
+  for (let i = 1; i <= x1 && i<=x2; i++) {    
+    if (x1%i==0 && x2%i==0)       
+        dividers.push(i)    
+      
+     }
+
+console.log(dividers.pop());
 
 
