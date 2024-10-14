@@ -660,6 +660,22 @@ function calculator(string) {
 
 
 
+// 3. Запросить у пользователя трехзначное число и проверить,
+// есть ли в нем одинаковые цифры.
+
+let newNumber = '328' as any
+newNumber.split('')
+
+for (let i = 0; i < newNumber.length; i++) {
+   if (newNumber[0]==newNumber[1] || newNumber[1]==newNumber[2] || newNumber[2]==newNumber[0] ) {
+      console.log(`В числе ${newNumber} есть одинаковые цифры`)
+    } else {
+      console.log(`В числе ${newNumber} нет одинаковых цифр`)
+ }
+}
+
+
+
 // 4. Запросить у пользователя год и проверить, високосный он
 // или нет. Високосный год либо кратен 400, либо кратен 4 и
 // при этом не кратен 100.
@@ -677,35 +693,70 @@ if (age%400==0) {  // 400 800 1200 1600 2000   .. кратен 400
 }
 
 
-// Написать конвертор валют. Пользователь вводит количе-
+// 5. Написать конвертор валют. Пользователь вводит количе-
 // ство USD, выбирает, в какую валюту хочет перевести: EUR,
 // UAN или AZN, и получает в ответ соответствующую сумму.
 
-let USD = 2
-switch (USD) {
-  case 1:
-    console.log('проверка');
-    
-    break;
 
-  default:
-    break;
+//! Первый способ
+// let quantity = Number(prompt('введите количество долларов для конвертации'))
+// let currency = prompt('введите подходящую валюту') as any
+// switch (currency) {
+  //   case 'EUR': // или через перечисление: case'ZLT':
+  //     console.log(`Количество EUR = ${quantity*0.9}`);
+  //     break;
+//   case 'UAN':
+//     console.log(`Количество UAN = ${quantity*25}`);
+//     break;
+//   case'AZN':
+//     console.log(`Количество AZN = ${quantity*10}`);
+//     break;
+//   default:
+//     console.log('Введена неверная валюта');
+//     break;
+// }
+
+
+// //! Второй способ
+let quantity = 100
+let currency ='AZN'
+if (currency=='EUR') {
+  console.log('количество евро: '+ quantity*0.9);
+} else if (currency=='UAN'){
+  console.log('количество гривен: '+ quantity*20);
+} else if (currency=='AZN'){
+  console.log('количество азерб денег : '+ quantity*10);
+} else {
+  console.log('Введена неверная валюта');
 }
-// интерполяция
 
 
-// 3. Запросить у пользователя трехзначное и число и проверить,
-// есть ли в нем одинаковые цифры.
+//! 7. Запросить у пользователя сумму покупки и вывести сумму
+//! к оплате со скидкой: от 200 до 300 – скидка будет 3%, от 300
+//! до 500 – 5%, от 500 и выше – 7%.
 
-let newNumber = '328' as any
-newNumber.split('')
-
-for (let i = 0; i < newNumber.length; i++) {
-   if (newNumber[0]==newNumber[1] || newNumber[1]==newNumber[2] || newNumber[2]==newNumber[0] ) {
-      console.log(`В числе ${newNumber} есть одинаковые цифры`)
-    } else {
-      console.log(`В числе ${newNumber} нет одинаковых цифр`)
- }
+let checkSumm = 300
+if (checkSumm<=200) {
+  console.log('У вас нет скидки');
+} else if(checkSumm>200 && checkSumm<=300){
+  console.log('Ваша скидка 3%, сумма к оплате: ' + (checkSumm- checkSumm*0.03));
+} else if(checkSumm>300 && checkSumm<=500){
+  console.log('Ваша скидка 5%, сумма к оплате: ' + (checkSumm- checkSumm*0.05));
+} else {
+  console.log('Ваша скидка 7%, сумма к оплате: ' + (checkSumm- checkSumm*0.07));
 }
 
+
+//! 8. Запросить у пользователя длину окружности и периметр
+//! квадрата. Определить, может ли такая окружность поме-
+//! ститься в указанный квадрат.
+
+let lenth = 12
+let perimetr = 25
+  let diametr = lenth/3.14
+  let side = perimetr/4
+console.log(diametr);
+console.log(side);
+
+diametr<side?console.log('Входит'): console.log('Не входит')
 
