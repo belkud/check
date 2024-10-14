@@ -760,3 +760,43 @@ console.log(side);
 
 diametr<side?console.log('Входит'): console.log('Не входит')
 
+// 2. Реализовать калькулятор. Пользователь вводит 2 числа и
+// знак (+ - * /). В зависимости от введенного знака решить
+// пример и вывести результат.
+
+
+
+
+let firstNum = 5
+let secondNum = 10
+let operator = '/'
+switch (operator) {
+  case '+':
+    console.log('Сумма чисел = ' + (firstNum + secondNum));
+    break;
+  case '-':
+    console.log('Вычитание чисел = ' + (firstNum - secondNum));
+    break;
+  case '*':
+    console.log('Умножение чисел = ' + firstNum * secondNum);
+    break;
+  case '/':
+    console.log('Деление чисел = ' + firstNum / secondNum);
+    break;
+
+  default:
+    break;
+}
+
+
+
+// Запросить 1 число и проверить, оно кратно 5 или нет.
+
+
+let multiplicity = 10
+multiplicity%5==0 ? console.log('число кратно 5') : console.log('число не кратно 5')
+
+
+
+
+
