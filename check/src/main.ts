@@ -797,18 +797,80 @@ let multiplicity = 10
 multiplicity%5==0 ? console.log('число кратно 5') : console.log('число не кратно 5')
 
 
-// Запросить 2 числа и найти только наибольший общий
-// делитель.
+  //! 2. Запросить 2 числа и найти только наибольший общий
+  //! делитель.
 let x1 = 20  
 let x2 = 10 
 let dividers = []  
 
-  for (let i = 1; i <= x1 && i<=x2; i++) {    
+for (let i = 1; i <= x1 && i<=x2; i++) {    
     if (x1%i==0 && x2%i==0)       
         dividers.push(i)    
       
      }
 
 console.log(dividers.pop());
+
+  //! 3. Запросить у пользователя число и вывести все делители
+  //! этого числа.
+
+let r =100
+let dividers2 = []  
+for (let i = 0; i < r; i++) {
+  if(r%i==0) {
+    dividers2.push(i)
+  }
+}
+console.log(dividers2);
+
+//! 4. Определить количество цифр в введенном числе.
+let u = 5
+let o = String(u)
+console.log(o.length);
+console.log('___________________');
+
+//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько
+//! он ввел положительных, отрицательных и нулей. При этом
+//! также посчитать, сколько четных и нечетных. Вывести
+//! статистику на экран. Учтите, что достаточно одной пере-
+//! менной (не 10) для ввода чисел пользователем.
+let numArr = [3, 5, -2, 10, 6, 9, -4, 1, 2, 8]
+
+let posNum = 0
+let negNum = 0
+let zeroNum = 0
+let evenNum = 0 //четные
+let oddNum = 0 // нечетные
+
+
+
+for (let i = 0; i < numArr.length; i++) {
+  if(numArr[i]>0) {
+    posNum++
+  }
+  if(numArr[i]<0) {
+    negNum++
+  }
+  if(numArr[i]==0) {
+    zeroNum++
+  }
+  if(numArr[i]%2==1) {
+    console.log(numArr[i]);
+    oddNum++
+  }
+  if(numArr[i]%2==0) {
+    evenNum++
+  }
+  
+  
+}
+
+console.log(`положительных чисел: ${posNum},
+  отрицательных чисел: ${negNum},
+  нолей: ${zeroNum},
+  четных чисел: ${evenNum},
+  нечетных чисел: ${oddNum},
+  `);
+
 
 
