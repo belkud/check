@@ -886,3 +886,5 @@ let mult = [] as any
 console.log(mult);
 
 
+let font = 'text-Align'
+console.log(font);
