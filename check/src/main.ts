@@ -888,3 +888,4 @@ console.log(mult);
 
 let font = 'text-Align'
 console.log(font);
+console.log(font);
