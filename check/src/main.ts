@@ -892,3 +892,7 @@ console.log(font);
 
 
 console.log('проверка кода');
+console.log('проверка кода');
+console.log('проверка кода');
+console.log('проверка кода');
+console.log('проверка кода');
