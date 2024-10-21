@@ -957,13 +957,20 @@ function abbreveation(params:any) {
   let letter = params.toUpperCase().split(' ')
   console.log(letter);
   
-  for (let i = 0; i < letter.length; i++) {
-      let x = letter[i].split('').splice(0,1)
-      arr.push(x)
+  //! Первый способ
+    // for (let i = 0; i < letter.length; i++) {
+    //     let x = letter[i].split('').splice(0,1)
+    //     arr.push(x)
+    //   }
+
+  //! Второй способ
+    letter.forEach(el=> {
+        let x = el.split('').splice(0,1)
+        arr.push(...x)        
+      })
+
+      console.log(arr.join(''));
     }
-  return console.log(arr.join(''))
-    
-}
 
 abbreveation('cascading style sheets')
 abbreveation('new mashine')
