@@ -1,3 +1,4 @@
+import { Logger } from 'sass';
 import './style.css'
 
 
@@ -892,7 +893,85 @@ console.log(font);
 
 
 console.log('проверка кода');
-console.log('проверка кода');
-console.log('проверка кода');
-console.log('проверка кода');
-console.log('проверка кода');
+
+
+
+
+// 3. Написать функцию, которая заменяет в полученной строке
+// большие буквы на маленькие, маленькие – на большие, а
+// цифры – на знак нижнего подчеркивания.
+
+
+
+
+// let frase = 'ПроВерка ЧислА 999'
+
+// let changeFrase = frase.split('') as any
+// console.log(changeFrase);
+
+
+let newFrase = [] as any
+
+let changeFrase = 'mkomIM'
+let changeFrase2 = changeFrase.split('')
+
+changeFrase2.forEach((el:any)=> {
+  if (el>=0 &&el<=9 && el!=' ') {
+    el='_'
+    newFrase.push(el) 
+  } else if (el==el.toLowerCase()) {
+    newFrase.push(el.toUpperCase()) 
+  } else if (el==el.toUpperCase()){
+    newFrase.push(el.toLowerCase()) 
+  }
+})
+
+
+function frases (changeFrase:any) {
+  changeFrase
+return console.log(newFrase.join(''))
+
+}
+
+frases('jtjdtH')
+
+
+ 
+ 
+// console.log(changeRegisterLetters('ПриВет КоТ357'));
+
+// console.log(letters.join(''));
+
+// const fruits = ['🍎', '🍊', '🍋', '🍓', '🥝']
+
+
+
+
+// Написать функцию, которая принимает словосочетание
+// и превращает его в аббревиатуру.
+// Например: cascading style sheets в CSS, объектно-
+// ориентированное программирование в ООП.
+
+function abbreveation(params:any) {
+  let letter = params.toUpperCase().split('')
+  console.log(letter);
+
+    for (let i = 0; i < letter.length; i++) {
+      // let x = letter[i].split('').splice(0,1)
+    //  let y = x.toUpperCase()
+      
+      // console.log(x);
+    }
+    
+  return console.log(letter.length)
+}
+
+abbreveation('cascading style sheets')
+
+
+
+
+
+
+
+
