@@ -947,26 +947,27 @@ frases('jtjdtH')
 
 
 
-// Написать функцию, которая принимает словосочетание
+// 5. Написать функцию, которая принимает словосочетание
 // и превращает его в аббревиатуру.
 // Например: cascading style sheets в CSS, объектно-
 // ориентированное программирование в ООП.
 
 function abbreveation(params:any) {
-  let letter = params.toUpperCase().split('')
+  let arr = [] as any
+  let letter = params.toUpperCase().split(' ')
   console.log(letter);
-
-    for (let i = 0; i < letter.length; i++) {
-      // let x = letter[i].split('').splice(0,1)
-    //  let y = x.toUpperCase()
-      
-      // console.log(x);
+  
+  for (let i = 0; i < letter.length; i++) {
+      let x = letter[i].split('').splice(0,1)
+      arr.push(x)
     }
+  return console.log(arr.join(''))
     
-  return console.log(letter.length)
 }
 
 abbreveation('cascading style sheets')
+abbreveation('new mashine')
+abbreveation('java script')
 
 
 
