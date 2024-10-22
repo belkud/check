@@ -1015,6 +1015,26 @@ urlFunc('https://itstep.org/ua/about/fgfg/dfg')
 urlFunc('https://rutube.ru/video/10b60f46ed36fc800ae1ad17ea4c463b/')
 
 
+//! 9. Написать функцию, которая принимает строку и раздели-
+//! тель и возвращает массив подстрок, разбитых с помощью
+//! указанного разделителя.
+//! Например: строка “10/08/2020”, разделитель “/”, результат:
+//! “10”, “08”, “2020”.
+//! Выполняя задание, не используйте функцию split().
+
+
+let changeStr = '10/08/2020'
+let newString = [] as any
+
+for (let i = 0; i < changeStr.length; i++) {
+  if (changeStr[i]=='/') {
+    newString.push(',')
+  } else {
+    newString.push(changeStr[i])
+  }
+  
+}
+console.log(newString.join(''));
 
 
 
