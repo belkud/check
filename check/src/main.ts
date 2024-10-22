@@ -1022,8 +1022,6 @@ urlFunc('https://rutube.ru/video/10b60f46ed36fc800ae1ad17ea4c463b/')
 //! “10”, “08”, “2020”.
 //! Выполняя задание, не используйте функцию split().
 
-
-
 function returnNewString(changeStr:any) {
   let newString = [] as any
   
@@ -1035,9 +1033,28 @@ function returnNewString(changeStr:any) {
     }
     
   }
-  console.log(newString.join(''));  
+  return console.log(newString.join(''));  
 }
 
 returnNewString('10/08/2020')
 returnNewString('555/33/2555')
+
+
+
+//! 10. Написать функцию вывода текста по заданному шаблону.
+//! Функция принимает первым параметром шаблон, в тексте
+//! которого может использоваться %, после символа % ука-
+//! зывается индекс входного параметра. При выводе вместо
+//! %индекс необходимо вывести значение соответствующего
+//! входного параметра.
+//! Например: print(“Today is %1 %2.%3.%4”, “Monday”, 10,
+//! 8, 2020) должна вывести “Today is Monday 10.8.2020”.
+
+
+
+
+
+
+
+
 
