@@ -1023,18 +1023,21 @@ urlFunc('https://rutube.ru/video/10b60f46ed36fc800ae1ad17ea4c463b/')
 //! Выполняя задание, не используйте функцию split().
 
 
-let changeStr = '10/08/2020'
-let newString = [] as any
 
-for (let i = 0; i < changeStr.length; i++) {
-  if (changeStr[i]=='/') {
-    newString.push(',')
-  } else {
-    newString.push(changeStr[i])
-  }
+function returnNewString(changeStr:any) {
+  let newString = [] as any
   
+  for (let i = 0; i < changeStr.length; i++) {
+    if (changeStr[i]=='/') {
+      newString.push(',')
+    } else {
+      newString.push(changeStr[i])
+    }
+    
+  }
+  console.log(newString.join(''));  
 }
-console.log(newString.join(''));
 
-
+returnNewString('10/08/2020')
+returnNewString('555/33/2555')
 
