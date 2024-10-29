@@ -28,7 +28,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  /* background-color: gree; */
+  background-color: gray;
 }
 
 h1 {
@@ -95,3 +95,66 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+#square {
+  background-color:rgb(172, 51, 11);
+  width: 150px;
+  height: 150px;
+  margin: 100px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 1s;
+  animation: anim 3s alternate infinite;
+  box-shadow: 20px 10px 10px rgb(39, 0, 0);
+}
+
+#square:hover {
+  background-color: #05095d;
+  transition: 1s;
+  cursor: pointer;
+}
+
+@keyframes anim {
+  from {
+    margin-left: 100px;
+    box-shadow: 20px 10px 10px rgb(39, 0, 0);
+  }
+  to {
+    margin-left: 300px;
+    box-shadow: -120px 100px 10px rgb(39, 0, 0);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
