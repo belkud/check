@@ -809,8 +809,8 @@ for (let i = 1; i <= x1 && i<=x2; i++) {
         dividers.push(i)    
       
      }
-
-console.log(dividers.pop());
+let yyy = dividers.pop()
+console.log(yyy);
 
   //! 3. Запросить у пользователя число и вывести все делители
   //! этого числа.
@@ -1162,4 +1162,64 @@ showInfo('hello day 123')
 showInfo(' today is 12335 !@#$')
 
 
+// 3. Написать функцию, которая заменяет в полученной строке
+// большие буквы на маленькие, маленькие – на большие, а
+// цифры – на знак нижнего подчеркивания.
 
+function changeLetters(a:any) {
+  let letters = a.split('')
+  let newElem = [] as any
+  letters.forEach(el=> {
+  if (el>=1 && el<=9) {
+    newElem.push(el='_')
+  }  else if(el == el.toLowerCase()){
+    newElem.push(el.toUpperCase())
+} else if (el == el.toUpperCase()) {
+  newElem.push(el.toLowerCase());
+
+}
+  }
+)
+return console.log(newElem.join(''))
+}
+
+
+
+changeLetters('ПриВет 123 Лето ')
+changeLetters('НоутБук 555')
+
+
+// Написать функцию – калькулятор. Функция принимает
+// строку с примером, определяет, какое действие необходимо
+// выполнить (+ - * /), переводит операнды в числа, решает
+// пример и возвращает результат.
+
+function calc(a:number, operator:any, b:number) {
+    if(operator=='+') {
+      return console.log(a + b)
+    } else if (operator=='-'){
+      return console.log(a - b)
+    } else if (operator=='*'){
+      return console.log(a * b)
+    } else if (operator=='/'){
+      return console.log(a / b)
+    }
+}
+calc (10, '/', 5)
+
+// 2. Написать функцию поиска наибольшего общего делителя.
+
+function findMaxDivider(a:number) {
+  for (let i = 0; i < a; i++) {
+    let array = [] as any
+    // let num =array.pop()
+    if(a%i==0) {
+      array.push(i)
+      
+      // console.log(array)
+    }
+    let x = array.pop()
+    return console.log(...array)
+  }
+}
+findMaxDivider(16)
