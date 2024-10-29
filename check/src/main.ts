@@ -1136,22 +1136,30 @@ multy(4,7)
 function showInfo (x:any) {
   let elem = {
     letters: 0,
-    numbers: 0 
+    numbers: 0,
+    symbols: 0, 
   }
   for (let i = 0; i < x.length; i++) {
-    if (x[i]>='a' || x[i]<='z') {
+    if (x[i]>='a' && x[i]<='z') {
       elem.letters++
       
-    } else if (x[i]!=' ' && x[i]>=0 || x[i]<=9 ) {
+    } else if (x[i]!=' ' && x[i]>=0 && x[i]<=9 ) {
       elem.numbers++
-      console.log(x[i]);
 
+    } else {
+      elem.symbols++
     }
           
   }
-  return console.log(elem.letters)
+  return console.log(`
+    количество букв: ${elem.letters}
+    количество цифр: ${elem.numbers}
+    количество символов: ${elem.symbols}
+    `)
 }
 
 showInfo('hello day 123')
+showInfo(' today is 12335 !@#$')
 
-// console.log();
+
+
