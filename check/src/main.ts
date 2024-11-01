@@ -1210,16 +1210,45 @@ calc (10, '/', 5)
 // 2. Написать функцию поиска наибольшего общего делителя.
 
 function findMaxDivider(a:number) {
+  let array = [] as any
   for (let i = 0; i < a; i++) {
-    let array = [] as any
-    // let num =array.pop()
     if(a%i==0) {
-      array.push(i)
-      
-      // console.log(array)
+      array.push(i)      
     }
-    let x = array.pop()
-    return console.log(...array)
   }
+    console.log(array.pop())
 }
 findMaxDivider(16)
+
+// 3. Написать функцию для поиска максимальной цифры в числе.
+
+function maxNumber (number:any) {
+  let x = number.split('').sort().pop()
+  return console.log(x);
+}
+maxNumber('638471928')
+maxNumber('765')
+
+
+
+// 5. Написать функцию для вывода всех множителей передан-
+// ного числа в возрастающем порядке.
+// Например: число 18 – множители 2 * 3 * 3.
+
+function writeMultipliers(num:any) {
+    for (let i = 1; i < num; i++) {
+      
+      if(num%i==0) {
+        console.log(i);
+        
+      }
+    }
+    // return console.log(num)
+
+}
+
+writeMultipliers(18)
+writeMultipliers(10)
+
+
+
